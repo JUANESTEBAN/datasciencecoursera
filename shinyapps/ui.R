@@ -8,7 +8,7 @@ pageWithSidebar(
   submitButton('Submit')
   ),
   mainPanel(
-  tabsetPanel(tabPanel("Body Mass Prediction",
+  tabsetPanel(tabPanel("Body Mass Index",
   h3('Results of prediction'),
   h4('You entered a weight of'),
   verbatimTextOutput('inputValue1'),
@@ -16,8 +16,24 @@ pageWithSidebar(
   verbatimTextOutput('inputValue2'),
   h4('Your resulting Body Mass Index is'),
   verbatimTextOutput('prediction')),
-  tabPanel("Documentation")
-  ) 
-  )
-  )
+  tabPanel("Documentation", 
+  p(h4("Body Mass Index:")), 
+  br(), 
+  helpText("This application calculates body mass index."), 
+  HTML("<u><b>Equation for calculation: </b></u> 
+  <br> <br> 
+  <b> BMI=W/H^2 </b> 
+  <br> 
+  where: <br> 
+  BMI = Body Mass Index <br> 
+  W = Body Weight in kilograms <br> 
+  H = Height in meters <br> 
+"),
+ h4("The following link contains ui.R and server.R:"),
+ a(href="https://github.com/JUANESTEBAN/datasciencecoursera/tree/master/shinyapps",
+  "https://github.com/JUANESTEBAN/datasciencecoursera/tree/master/shinyapps")
+) 
+)
+)
+)
 )
